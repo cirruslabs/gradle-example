@@ -1,4 +1,4 @@
-continer:
+container:
   image: gradle:4.3.1-jdk8
 
 check_task:
