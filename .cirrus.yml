@@ -1,0 +1,5 @@
+continer:
+  image: gradle:4.3.1-jdk8
+
+check_task:
+  script: gradle check
