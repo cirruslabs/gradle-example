@@ -3,3 +3,7 @@ container:
 
 check_task:
   script: gradle check
+  always:
+    junit_artifacts:
+      path: "**/test-results/**/*.xml"
+      format: junit
