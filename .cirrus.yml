@@ -1,5 +1,5 @@
 container:
-  image: gradle:5
+  image: gradle:jdk8
 
 check_task:
   script: gradle check
