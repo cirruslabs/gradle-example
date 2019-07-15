@@ -6,8 +6,7 @@ check_task:
     folder: ~/.gradle/caches
   check_script: ./gradlew check
   cleanup_before_cache_script:
-    - shopt -s extglob
-    - rm -rf ~/.gradle/caches/[0-9](.[0-9])+
+    - rm -rf ~/.gradle/caches/?.?.?
     - rm -rf ~/.gradle/caches/transforms-1
     - rm -rf ~/.gradle/caches/journal-1
     - find ~/.gradle/caches/ -name "*.lock" -type f -delete
