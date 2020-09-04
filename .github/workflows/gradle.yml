@@ -14,3 +14,7 @@ jobs:
         with:
           java-version: 13
       - run: ./gradlew check
+      - name: debug info
+        run: |
+          docker ps
+          docker logs cache_proxy
