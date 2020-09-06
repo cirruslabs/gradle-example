@@ -1,12 +1,10 @@
 name: gradle
-on:
-  push:
-  pull_request:
+on: [push, pull_request]
 
 jobs:
-  test:
+  test-remote:
     runs-on: ubuntu-latest
-    name: Gradle Check
+    name: Gradle Check (Remote)
     steps:
       - uses: actions/checkout@v2
       - uses: cirruslabs/http-cache-action@master
@@ -18,3 +16,13 @@ jobs:
         run: |
           docker ps
           docker logs cache_proxy
+  
+  test-local:
+    runs-on: ubuntu-latest
+    name: Gradle Check (Local)
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: 13
+      - run: ./gradlew check
