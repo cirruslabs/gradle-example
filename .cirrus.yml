@@ -7,3 +7,7 @@ check_task:
       - cat build.gradle.kts
     folder: ~/.gradle/caches
   check_script: ./gradlew check
+  always:
+    junit_artifacts:
+      path: "**/test-results/**/*.xml"
+      format: junit
