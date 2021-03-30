@@ -1,0 +1,3 @@
+[submodule "cirrus-cli"]
+	path = cirrus-cli
+	url = https://github.com/cirruslabs/cirrus-cli
